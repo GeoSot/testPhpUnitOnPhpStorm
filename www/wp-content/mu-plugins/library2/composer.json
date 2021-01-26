@@ -1,0 +1,17 @@
+{
+    "name": "sample/library2",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Sample\\Library2\\": "src/"
+        },
+        "files": [
+          "library2.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Sample\\Library2\\": "tests/"
+        }
+    }
+}

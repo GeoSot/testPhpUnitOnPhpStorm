@@ -1,0 +1,31 @@
+{
+  "name": "sample/sample",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "illuminate/support": "^8.11",
+    "wikimedia/composer-merge-plugin": "^1.4"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "merge-plugin": {
+      "ignore-duplicates": true,
+      "require": [
+        "mu-plugins/library1/composer.json",
+        "mu-plugins/library2/composer.json"
+      ],
+      "merge-dev": true
+    }
+  },
+  "require-dev": {
+    "10up/wp_mock": "^0.4.2",
+    "phpspec/prophecy-phpunit": "^2.0",
+    "phpunit/phpunit": "^9.5",
+    "symfony/var-dumper": "^5"
+  }
+}

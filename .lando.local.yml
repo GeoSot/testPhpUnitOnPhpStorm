@@ -1,0 +1,12 @@
+name: test
+services:
+  database:
+    portforward: 53306
+  redisserver:
+    portforward: 52129
+
+proxy:
+  appserver:
+    - test.phpunit.site
+  redisserver:
+    - test-redis.phpunit.site

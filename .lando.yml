@@ -1,0 +1,23 @@
+name: test
+recipe: wordpress
+config:
+  php: '7.4'
+  composer_version: '1.10.15'
+  webroot: www
+  xdebug: true
+  database: mysql:5.7.28
+  config:
+    php: config/php/php.ini
+    database: config/mysql/my.cnf
+services:
+  appserver:
+    ssl: true
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
+  redisserver:
+    type: redis:5.0
+    persist: false
+    portforward: true
+    config:
+      server: config/redis/redis.custom.cnf
